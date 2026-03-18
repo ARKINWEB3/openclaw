@@ -53,8 +53,14 @@ build/
 *.sqlite
 *.sqlite3
 
-# Exclude session transcripts (too large)
+# Exclude session transcripts (too large and may contain secrets)
 workspace/sessions/
+agents/main/sessions/
+agents/*/sessions/*.jsonl
+agents/*/sessions/*.jsonl.deleted.*
+
+# Exclude cron run logs (may contain sensitive output)
+cron/runs/
 
 # Keep important config files
 !openclaw.json

@@ -7,7 +7,7 @@
       "description": "Nightly Security Audit (SlowMist Defense Matrix)",
       "enabled": true,
       "createdAtMs": 1773818423213,
-      "updatedAtMs": 1773818423213,
+      "updatedAtMs": 1773818732870,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -28,7 +28,13 @@
       },
       "state": {
         "nextRunAtMs": 1773860400000,
-        "runningAtMs": 1773818432855
+        "lastRunAtMs": 1773818432855,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 300015,
+        "lastError": "Error: cron: job execution timed out",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]
