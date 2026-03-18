@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "profiles": {
+    "claude-yunyi:default": {
+      "type": "api_key",
+      "key": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
+      "provider": "claude-yunyi"
+    }
+  },
+  "lastGood": {
+    "anthropic": "anthropic:default",
+    "claude-yunyi": "claude-yunyi:default",
+    "openai-codex": "openai-codex:default"
+  },
+  "usageStats": {
+    "anthropic:default": {
+      "errorCount": 0,
+      "lastFailureAt": 1773110745735,
+      "lastUsed": 1773110745741
+    },
+    "claude-yunyi:default": {
+      "lastUsed": 1773818735827,
+      "errorCount": 0,
+      "lastFailureAt": 1771333481749
+    },
+    "openai-codex:default": {
+      "lastUsed": 1773045752231,
+      "errorCount": 0
+    }
+  }
+}

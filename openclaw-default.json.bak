@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.3-1",
+    "lastTouchedAt": "2026-02-09T02:56:33.367Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-09T02:56:33.358Z",
+    "lastRunVersion": "2026.2.3-1",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "model": {
+        "primary": "anthropic/claude-opus-4-5"
+      },
+      "models": {
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus"
+        }
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": false
+    },
+    "auth": {
+      "mode": "token",
+      "token": "e83ba6ceed042b3de2d5299e4d4ab9b42639ecd518900367"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "qqbot": {
+        "enabled": true
+      },
+      "ddingtalk": {
+        "enabled": true
+      },
+      "wecom": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "qqbot": {
+        "source": "npm",
+        "spec": "https://github.com/sliverp/qqbot.git",
+        "installPath": "/root/.openclaw/extensions/qqbot",
+        "version": "1.4.2",
+        "installedAt": "2026-02-06T10:38:24.414Z"
+      },
+      "ddingtalk": {
+        "source": "npm",
+        "spec": "https://github.com/largezhou/openclaw-dingtalk.git",
+        "installPath": "/root/.openclaw/extensions/ddingtalk",
+        "version": "1.1.0",
+        "installedAt": "2026-02-06T10:38:47.056Z"
+      },
+      "wecom": {
+        "source": "npm",
+        "spec": "https://github.com/xl370869-art/wecom.git",
+        "installPath": "/root/.openclaw/extensions/wecom",
+        "version": "2026.2.5",
+        "installedAt": "2026-02-06T10:39:17.377Z"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "8280466913:AAF1mJbyctVhAdZfeIFcZq6cABGvqfARKP8"
+    }
+  }
+}

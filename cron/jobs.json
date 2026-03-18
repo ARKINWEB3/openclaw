@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "261c1679-cb02-40a1-9c91-2b447fc47e88",
+      "name": "nightly-security-audit",
+      "description": "Nightly Security Audit (SlowMist Defense Matrix)",
+      "enabled": true,
+      "createdAtMs": 1773818423213,
+      "updatedAtMs": 1773818732870,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute this command and output the result as-is, no extra commentary: bash ~/.openclaw/workspace/scripts/nightly-security-audit.sh",
+        "thinking": "off",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "8570839393"
+      },
+      "state": {
+        "nextRunAtMs": 1773860400000,
+        "lastRunAtMs": 1773818432855,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 300015,
+        "lastError": "Error: cron: job execution timed out",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
+      }
+    }
+  ]
+}

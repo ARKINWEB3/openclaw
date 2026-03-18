@@ -1,0 +1,69 @@
+# OpenClaw Backup .gitignore
+# Exclude sensitive and temporary files
+
+# Node modules
+node_modules/
+.pnpm-store/
+
+# Logs
+*.log
+logs/
+workspace/logs/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+*.cache
+
+# Build artifacts
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Sensitive data (DO NOT COMMIT)
+# Note: openclaw.json and paired.json WILL be backed up (they're encrypted/hashed)
+# But we exclude any plaintext secrets
+*.key
+*.pem
+*.p12
+*.pfx
+*_rsa
+*_dsa
+*_ecdsa
+*_ed25519
+
+# Exclude large binary files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.iso
+*.dmg
+
+# Exclude database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Exclude session transcripts (too large)
+workspace/sessions/
+
+# Keep important config files
+!openclaw.json
+!devices/paired.json
+!workspace/AGENTS.md
+!workspace/SOUL.md
+!workspace/USER.md
+!workspace/TOOLS.md
+!workspace/IDENTITY.md
+!workspace/HEARTBEAT.md
+!workspace/memory/*.md
+!workspace/scripts/*.sh

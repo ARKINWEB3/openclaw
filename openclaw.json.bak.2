@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-15T04:22:44.733Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T02:45:06.235Z",
+    "lastRunVersion": "2026.2.19-2",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "claude-yunyi:default": {
+        "provider": "claude-yunyi",
+        "mode": "api_key"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "claude-yunyi": {
+        "baseUrl": "https://cdn1.yunyi.cfd/claude",
+        "apiKey": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
+        "auth": "api-key",
+        "api": "anthropic-messages",
+        "headers": {},
+        "authHeader": false,
+        "models": [
+          {
+            "id": "claude-sonnet-4-5",
+            "name": "Claude Sonnet 4.5",
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "claude-yunyi/claude-sonnet-4-5",
+        "fallbacks": []
+      },
+      "models": {
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "claude-yunyi/claude-sonnet-4-5": {
+          "alias": "claude-yunyi"
+        },
+        "claude-yunyi/claude-opus-4-6": {
+          "alias": "claude-yunyi"
+        },
+        "openai-codex/gpt-5.3-codex": {}
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "30m"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8557592837:AAGziqYOYynga4f3YPlcdC3sSVWpLZm5SR4",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ],
+      "allowInsecureAuth": false
+    },
+    "auth": {
+      "mode": "token",
+      "token": "e83ba6ceed042b3de2d5299e4d4ab9b42639ecd518900367"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "token": "e83ba6ceed042b3de2d5299e4d4ab9b42639ecd518900367"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "qqbot": {
+        "enabled": true
+      },
+      "ddingtalk": {
+        "enabled": true
+      },
+      "wecom": {
+        "enabled": true
+      },
+      "adp-openclaw": {
+        "enabled": true
+      },
+      "skillhub": {
+        "enabled": true,
+        "config": {
+          "primaryCli": "skillhub",
+          "fallbackCli": "clawhub",
+          "primaryLabel": "cn-optimized"
+        }
+      }
+    },
+    "installs": {
+      "qqbot": {
+        "source": "npm",
+        "spec": "@sliverp/qqbot",
+        "installPath": "/root/.openclaw/extensions/qqbot",
+        "version": "1.5.4",
+        "installedAt": "2026-03-15T04:21:41.000Z"
+      },
+      "ddingtalk": {
+        "source": "npm",
+        "spec": "@largezhou/ddingtalk",
+        "installPath": "/root/.openclaw/extensions/ddingtalk",
+        "version": "1.4.0",
+        "installedAt": "2026-03-15T04:21:49.000Z"
+      },
+      "wecom": {
+        "source": "npm",
+        "spec": "@mocrane/wecom",
+        "installPath": "/root/.openclaw/extensions/wecom",
+        "version": "2026.3.14",
+        "installedAt": "2026-03-15T04:22:03.000Z"
+      },
+      "adp-openclaw": {
+        "source": "npm",
+        "spec": "adp-openclaw",
+        "installPath": "/root/.openclaw/extensions/adp-openclaw",
+        "version": "0.0.69",
+        "installedAt": "2026-03-15T04:22:05.000Z"
+      }
+    }
+  }
+}
