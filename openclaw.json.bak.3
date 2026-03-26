@@ -1,11 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-03-15T04:22:40.891Z"
+    "lastTouchedAt": "2026-03-19T01:04:24.238Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-10T02:45:06.235Z",
-    "lastRunVersion": "2026.2.19-2",
+    "lastRunAt": "2026-03-19T01:04:24.189Z",
+    "lastRunVersion": "2026.3.8",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -49,7 +49,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "claude-yunyi/claude-sonnet-4-5",
+        "primary": "anthropic/claude-opus-4-5",
         "fallbacks": []
       },
       "models": {
@@ -84,6 +84,9 @@
       }
     }
   },
+  "tools": {
+    "profile": "coding"
+  },
   "messages": {
     "ackReactionScope": "group-mentions"
   },
@@ -92,6 +95,9 @@
     "nativeSkills": "auto",
     "restart": true,
     "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
   },
   "hooks": {
     "internal": {
@@ -115,13 +121,15 @@
   "gateway": {
     "port": 18789,
     "mode": "local",
-    "bind": "lan",
+    "bind": "loopback",
     "controlUi": {
       "allowedOrigins": [
         "http://localhost:18789",
         "http://127.0.0.1:18789"
       ],
-      "allowInsecureAuth": false
+      "dangerouslyAllowHostHeaderOriginFallback": true,
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
     },
     "auth": {
       "mode": "token",
@@ -164,7 +172,9 @@
         "enabled": true,
         "config": {
           "primaryCli": "skillhub",
-          "fallbackCli": "clawhub"
+          "fallbackCli": "clawhub",
+          "primaryLabel": "cn-optimized",
+          "fallbackLabel": "public-registry"
         }
       }
     },

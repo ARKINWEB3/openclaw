@@ -1,11 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-03-15T04:22:48.230Z"
+    "lastTouchedAt": "2026-03-19T11:11:00.100Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-10T02:45:06.235Z",
-    "lastRunVersion": "2026.2.19-2",
+    "lastRunAt": "2026-03-19T11:11:00.044Z",
+    "lastRunVersion": "2026.3.8",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -29,12 +29,12 @@
     "mode": "merge",
     "providers": {
       "claude-yunyi": {
-        "baseUrl": "https://cdn1.yunyi.cfd/claude",
-        "apiKey": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
+        "baseUrl": "https://yunyi.cfd/claude",
         "auth": "api-key",
         "api": "anthropic-messages",
         "headers": {},
         "authHeader": false,
+        "apiKey": "TTQHASNX-B0FN-VRWH-RMPA-CXH6V2BMBX8Z",
         "models": [
           {
             "id": "claude-sonnet-4-5",
@@ -84,6 +84,9 @@
       }
     }
   },
+  "tools": {
+    "profile": "coding"
+  },
   "messages": {
     "ackReactionScope": "group-mentions"
   },
@@ -92,6 +95,9 @@
     "nativeSkills": "auto",
     "restart": true,
     "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
   },
   "hooks": {
     "internal": {
@@ -115,13 +121,15 @@
   "gateway": {
     "port": 18789,
     "mode": "local",
-    "bind": "lan",
+    "bind": "loopback",
     "controlUi": {
       "allowedOrigins": [
         "http://localhost:18789",
         "http://127.0.0.1:18789"
       ],
-      "allowInsecureAuth": false
+      "dangerouslyAllowHostHeaderOriginFallback": true,
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
     },
     "auth": {
       "mode": "token",

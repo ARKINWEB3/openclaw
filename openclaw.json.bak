@@ -1,11 +1,11 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-03-15T04:23:20.574Z"
+    "lastTouchedAt": "2026-03-22T04:32:54.104Z"
   },
   "wizard": {
-    "lastRunAt": "2026-03-10T02:45:06.235Z",
-    "lastRunVersion": "2026.2.19-2",
+    "lastRunAt": "2026-03-19T11:11:00.044Z",
+    "lastRunVersion": "2026.3.8",
     "lastRunCommand": "onboard",
     "lastRunMode": "local"
   },
@@ -29,8 +29,8 @@
     "mode": "merge",
     "providers": {
       "claude-yunyi": {
-        "baseUrl": "https://cdn1.yunyi.cfd/claude",
-        "apiKey": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
+        "baseUrl": "https://yunyi.cfd/claude",
+        "apiKey": "TTQHASNX-B0FN-VRWH-RMPA-CXH6V2BMBX8Z",
         "auth": "api-key",
         "api": "anthropic-messages",
         "headers": {},
@@ -84,6 +84,9 @@
       }
     }
   },
+  "tools": {
+    "profile": "coding"
+  },
   "messages": {
     "ackReactionScope": "group-mentions"
   },
@@ -92,6 +95,9 @@
     "nativeSkills": "auto",
     "restart": true,
     "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
   },
   "hooks": {
     "internal": {
@@ -115,7 +121,7 @@
   "gateway": {
     "port": 18789,
     "mode": "local",
-    "bind": "lan",
+    "bind": "loopback",
     "controlUi": {
       "allowedOrigins": [
         "http://localhost:18789",
@@ -170,6 +176,9 @@
           "primaryLabel": "cn-optimized",
           "fallbackLabel": "public-registry"
         }
+      },
+      "openclaw-weixin": {
+        "enabled": true
       }
     },
     "installs": {
@@ -200,6 +209,19 @@
         "installPath": "/root/.openclaw/extensions/adp-openclaw",
         "version": "0.0.69",
         "installedAt": "2026-03-15T04:22:05.000Z"
+      },
+      "openclaw-weixin": {
+        "source": "npm",
+        "spec": "@tencent-weixin/openclaw-weixin",
+        "installPath": "/root/.openclaw/extensions/openclaw-weixin",
+        "version": "1.0.2",
+        "resolvedName": "@tencent-weixin/openclaw-weixin",
+        "resolvedVersion": "1.0.2",
+        "resolvedSpec": "@tencent-weixin/openclaw-weixin@1.0.2",
+        "integrity": "sha512-kYPEowHB/0VWt9nQFee/AS6Fb+jbnu38wjkgZDBdKTuJoBL0IBW2obQ0ymgFKBFJJL9rDwnFrb/17ORGZD/X8Q==",
+        "shasum": "244baf0a873683a9c350d0f0b5bc055c07b0eb39",
+        "resolvedAt": "2026-03-22T04:31:52.874Z",
+        "installedAt": "2026-03-22T04:32:51.293Z"
       }
     }
   }

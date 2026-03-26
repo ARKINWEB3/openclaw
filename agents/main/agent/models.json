@@ -1,7 +1,7 @@
 {
   "providers": {
     "claude-yunyi": {
-      "baseUrl": "https://cdn1.yunyi.cfd/claude",
+      "baseUrl": "https://yunyi.cfd/claude",
       "apiKey": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
       "auth": "api-key",
       "api": "anthropic-messages",

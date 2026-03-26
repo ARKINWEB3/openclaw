@@ -3,8 +3,13 @@
   "profiles": {
     "claude-yunyi:default": {
       "type": "api_key",
-      "key": "GMZBK6DR-TQA9-MM56-M65H-EUNPDSV82EMA",
+      "key": "TTQHASNX-B0FN-VRWH-RMPA-CXH6V2BMBX8Z",
       "provider": "claude-yunyi"
+    },
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "TTQHASNX-B0FN-VRWH-RMPA-CXH6V2BMBX8Z"
     }
   },
   "lastGood": {
@@ -16,10 +21,10 @@
     "anthropic:default": {
       "errorCount": 0,
       "lastFailureAt": 1773110745735,
-      "lastUsed": 1773110745741
+      "lastUsed": 1773917709119
     },
     "claude-yunyi:default": {
-      "lastUsed": 1773819280681,
+      "lastUsed": 1774551900054,
       "errorCount": 0,
       "lastFailureAt": 1771333481749
     },
