@@ -7,7 +7,7 @@
       "description": "Nightly Security Audit (SlowMist Defense Matrix)",
       "enabled": true,
       "createdAtMs": 1773818423213,
-      "updatedAtMs": 1774551900026,
+      "updatedAtMs": 1774724471303,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -27,14 +27,15 @@
         "to": "8570839393"
       },
       "state": {
-        "nextRunAtMs": 1774638000000,
-        "lastRunAtMs": 1774551600006,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 300020,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "runningAtMs": 1774638000002
+        "nextRunAtMs": 1774810800000,
+        "lastRunAtMs": 1774724400005,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 71298,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true,
+        "runningAtMs": 1774810800002
       }
     }
   ]
